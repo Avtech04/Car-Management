@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
   // Build the target URL to your Elastic Beanstalk backend
-  const targetUrl = `http://car-management.ap-south-1.elasticbeanstalk.com/${req.url}`;
+  const targetUrl = `http://car-management.ap-south-1.elasticbeanstalk.com${req.url}`;
 
   try {
     const response = await fetch(targetUrl, {
