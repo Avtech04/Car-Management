@@ -17,7 +17,7 @@ const Signup = () => {
             return;
         }
         try {
-            await api.post("/auth/signup", { email, password });
+            await api.post("/api/proxy/api/auth/signup", { email, password });
             alert("Signup successful! Please log in.");
             navigate("/login");
         } catch (err) {
